@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <!-- CSS -->
+    <link href="{{ app.request.basepath }}/lib/boostrap/boostrap.css" rel="stylesheet">
+    <link href="{{ app.request.basepath }}/css/index.css" rel="stylesheet">
+    <!-- SCRIPT -->
+    <script src="{{ app.request.basepath }}/lib/jquery/jquery-3.1.1.js"></script>
+    <script src="{{ app.request.basepath }}/lib/angular/angular.min.js"></script>
+    <script src="{{ app.request.basepath }}/lib/boostrap/boostrap.js"></script>
+</head>
+
+<body>
+    {% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+    <h1>trololo</h1>
+</body>
+
 </html>
