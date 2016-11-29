@@ -1,0 +1,430 @@
+/***************index.html******************************/
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.navbar button {
+    margin-top: 12px;
+    background-color: #222;
+    border: 0px;
+    color: white;
+    text-transform: capitalize;
+    outline: inherit;
+}
+
+/* Add a gray background color and some padding to the footer */
+
+footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+}
+
+.carousel-inner img {
+	width: 100%;
+	/* Set width to 100% */
+	margin: auto;
+	min-height: 200px;
+}
+
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+
+@media (max-width: 600px) {
+	.carousel-caption {
+		display: none;
+	}
+}
+
+/*[class*="col-"] {
+	padding-right: 0px;
+	padding-left: 0px;
+}*/
+
+
+/***************************************************************************page comment ça marche*******************/
+
+
+/**
+ * Parallax styles
+ *
+ * All aesthetic styles are at the bottom for the benefit of better understanding the demo.
+ */
+
+html {
+	/* Give our document a fake height for demo purposes. */
+	height: 950px;
+	/* We must set out root `font-size` to 0 to prevent our parallax margins being calculated */
+	font-size: 0;
+}
+
+body {
+	/* Reset the `font-size` to 16px/1em/100% */
+	font-size: 16px;
+}
+
+
+/* Fix our parallax elements in position */
+
+.parallax { 
+	position: fixed;
+}
+
+
+/**
+ * Position our elements
+ *
+ * Firstly we set our element position using `top`, `right`, `bottom`, `left`, then set your parallax movement using `margin` and `rem`.
+ *
+ * In this demo our 'base factor' is 50 (see JavaScript). Our 'factor' calculation never exceeds this number (when the viewport is fully scrolled), which means our `rem` calculations are based on this number.
+ *
+ * Example:
+ *
+ * If I set my `top` to `200px` and want this element to shift up by `400px`, our `rem` value is 400/10, or `-40em` (using negative margins to shift upwards).
+ */
+
+h1 {
+	top: 75px;
+	margin-top: -3rem;
+	z-index: 5;
+}
+
+.box {
+	top: -1400px;
+	/* Positive margin, so it appears from above */
+	margin-top: 29rem;
+	/* Center and pad */
+	left: 50%;
+	margin-left: -27%;
+	padding: 2%;
+	width: 50%;
+}
+
+.btn {
+	top: 5em;
+	right: -800px;
+	margin-right: 18.5rem;
+}
+
+.skyline {
+	top: 240px;
+	margin-top: -28rem;
+	left: 8%;
+}
+
+.blimp {
+	top: 320px;
+	margin-top: -55rem;
+	left: 24%;
+}
+
+.gherkin {
+	top: 200px;
+	margin-top: -20rem;
+	left: 40%;
+	z-index: 10;
+}
+
+.bull {
+	top: 360px;
+	margin-top: -47rem;
+	left: 56%;
+}
+
+.dino {
+	top: 260px;
+	margin-top: -33rem;
+	left: 72%;
+}
+
+
+/**
+ * Demo aesthetics
+ */
+
+/*.paxallax {
+	background: #233c38 url('http://goo.gl/5wJBu') 50% 50%;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	color: #fff;
+}*/
+
+a {
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+a:hover {
+	color: magenta;
+}
+
+h1 {
+	width: 100%;
+	font: 3em/1 'Oswald', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+img {
+	width: 20%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+code {
+	background-color: #222;
+	color: magenta;
+}
+
+.box {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.5em 1em;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom: 0;
+}
+
+/* ===================================
+    CONNEXION
+====================================== */
+
+.modal-body {
+    padding-left: 0px;
+}
+
+.modal-header {
+    border:  0;
+    background: whitesmoke;
+}
+
+.modal-content {
+    background: whitesmoke;
+    height: 1050px;
+}
+
+.close,
+button.close {
+    color: #222;
+    padding: 20px;
+}
+
+.clearfix:after,
+.clearfix:before {
+	content: '';
+	display: table
+}
+
+.clearfix:after {
+	clear: both;
+	display: block
+}
+
+.login-wrap {
+	width: 100%;
+	margin: auto;
+	max-width: 525px;
+	min-height: 670px;
+	position: relative;
+}
+
+.login-html {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding: 90px 70px 50px 70px;
+	background: whitesmoke;
+
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition: all .4s linear;
+    
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+	display: none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+	text-transform: uppercase;
+}
+
+.login-html .tab {
+	font-size: 22px;
+    color: grey;
+	margin-right: 15px;
+	padding-bottom: 5px;
+	margin: 0 15px 10px 0;
+	display: inline-block;
+	border-bottom: 2px solid transparent;
+}
+
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab {
+	color: #222;
+	border-color: steelblue;
+    margin-bottom: 50px;
+}
+
+.login-form {
+	min-height: 345px;
+	position: relative;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+.login-form .group {
+	margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+	width: 100%;
+	color: #222;
+	display: block;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+	border: 1px solid steelblue;
+    background-color: whitesmoke;
+	padding: 15px 20px;
+	border-radius: 0;
+    outline: inherit;
+}
+
+
+.login-form .group .input:focus,
+.login-form .group .button:focus {
+    background-color: lightblue;
+}
+
+.login-form .group input[data-type="password"] {
+	text-security: circle;
+	-webkit-text-security: circle;
+}
+
+.login-form .group select  {
+    padding: 15px 20px;
+    color: #333;
+    font-size: "Open Sans";
+    border: 1px solid steelblue;
+    outline: inherit;
+    background-color: whitesmoke;
+}
+
+.login-form .group option {
+    background-color:  lightblue;
+    color: #333;
+    padding-top: 20px;
+    outline: 0;
+    border: 0;
+    font-size: 1em;
+}
+
+.login-form .group .label {
+	color: #222;
+	font-size: 12px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.login-form .group .button {
+	background-color: steelblue;
+    color: whitesmoke;
+}
+
+.login-form .group label .icon {
+	width: 15px;
+	height: 15px;
+	border-radius: 2px;
+	position: relative;
+	display: inline-block;
+    background-color: lightgrey;
+}
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+	content: '';
+	width: 10px;
+	height: 2px;
+	background: #222;
+	position: absolute;
+	transition: all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before {
+	left: 3px;
+	width: 5px;
+	bottom: 6px;
+	transform: scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after {
+	top: 6px;
+	right: 0;
+	transform: scale(0) rotate(0);
+}
+
+.login-form .group .check:checked + label {
+	color: #333;    
+}
+
+.login-form .group .check:checked + label .icon {
+	background: steelblue;
+}
+
+.login-form .group .check:checked + label .icon:before {
+	transform: scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked + label .icon:after {
+	transform: scale(1) rotate(-45deg);
+}
+
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
+	transform: rotate(0);
+}
+
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+	transform: rotate(0);
+}
+
+.hr {
+	height: 2px;
+	margin: 20px 0 20px 0;
+	background: rgba(255, 255, 255, .2);
+}
+
+.foot-lnk {
+	text-align: center;
+}
