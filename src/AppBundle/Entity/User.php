@@ -35,7 +35,6 @@ protected $nom;
 
 protected $pseudo;
 protected $email;
-protected $password;
 protected $ville;
 protected $region;
 protected $codepostal;
