@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>{% block title %}Welcome!{% endblock %}</title>
+	{% block stylesheets %}{% endblock %}
+	<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+	<!-- CSS -->
+	<link href="{{ app.request.basepath }}/lib/bootstrap/bootstrap.css" rel="stylesheet">
+	<link href="{{ app.request.basepath }}/css/index.css" rel="stylesheet">
+	<!-- SCRIPT -->
+	<script src="{{ app.request.basepath }}/lib/jquery/jquery-3.1.1.js"></script>
+	<script src="{{ app.request.basepath }}/lib/bootstrap/bootstrap.js"></script>
+	<script src="{{ app.request.basepath }}/lib/angular/angular.min.js"></script>
+</head>
+
+<body>
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				<div class="login-wrap">
+					<div class="login-html">
+						<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+						<label for="tab-1" class="tab">Sign In</label>
+						<input id="tab-2" type="radio" name="tab" class="sign-up">
+						<label for="tab-2" class="tab">Sign Up</label>
+						<div class="login-form">
+							<div class="sign-in-htm">
+								<div class="group">
+									<label for="user" class="label">Username</label>
+									<input id="user" type="text" class="input">
+								</div>
+								<div class="group">
+									<label for="pass" class="label">Password</label>
+									<input id="pass" type="password" class="input" data-type="password">
+								</div>
+								<div class="group">
+									<input id="check" type="checkbox" class="check" checked>
+									<label for="check"><span class="icon"></span> Keep me Signed in</label>
+								</div>
+								<div class="group">
+									<input type="submit" class="button" value="Sign In">
+								</div>
+								<div class="hr"></div>
+								<div class="foot-lnk">
+									<a href="#forgot">Forgot Password?</a>
+								</div>
+							</div>
+
+							<div class="sign-up-htm">
+								<div class="group col-md-6">
+									<label for="user" class="label">Prénom</label>
+									<input id="user" type="text" class="input">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">Nom</label>
+									<input id="pass" class="input">
+								</div>
+
+								<div class="group col-md-6">
+									<label for="pass" class="label">Pseudo</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">Email</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label"> Password</label>
+									<input id="pass" type="password" class="input" data-type="password">
+								</div>
+
+								<div class="group col-md-12">
+									<label for="pass" class="label">Repeat Password</label>
+									<input id="pass" type="password" class="input" data-type="password">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">Code Postal</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">téléphone</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label">Status téléphone</label>
+									<select class="col-md-12">
+										<option>Public</option>
+										<option>Pour vos contact</option>
+										<option>Pour les utilisteurs</option>
+										<option>Privé</option>
+									</select>
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label">Vos services</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label">Catégorie</label>
+									<select class="col-md-12">
+										<option>Exemple 1</option>
+										<option>Exemple 2</option>
+										<option>Exemple 3</option>
+										<option>Exemple 4</option>
+									</select>
+								</div>
+
+								<div class="group col-md-12">
+									<input type="submit" class="button" value="Sign Up">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Accueil</a></li>
+					<!--					<li><a href="marche.html">Comment ça marche</a></li>-->
+
+					<li><a href="/profile">Mon profil</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<button type="button" class="" data-toggle="modal" data-target="#myModal">Inscription / Login</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	{% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+	<footer>
+
+	</footer>
+
+
+
+</body>
+
+</html>
