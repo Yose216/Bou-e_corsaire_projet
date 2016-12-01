@@ -31,30 +31,33 @@
 						<label for="tab-1" class="tab">Sign In</label>
 						<input id="tab-2" type="radio" name="tab" class="sign-up">
 						<label for="tab-2" class="tab">Sign Up</label>
+						
 						<div class="login-form">
-							<div class="sign-in-htm">
+							{% trans_default_domain 'FOSUserBundle' %}
+							<form class="sign-in-htm" action=="{{ path("fos_user_security_check") }}" method="post">
+							
 								<div class="group">
 									<label for="user" class="label">Username</label>
-									<input id="user" type="text" class="input">
+									<input id="username" name="_username" type="text" class="input">
 								</div>
 								<div class="group">
 									<label for="pass" class="label">Password</label>
-									<input id="pass" type="password" class="input" data-type="password">
+									<input id="password" name="_password" type="password" class="input" data-type="password">
 								</div>
 								<div class="group">
-									<input id="check" type="checkbox" class="check" checked>
+									<input id="remember_me" name="_remember_me" type="checkbox" class="check" checked>
 									<label for="check"><span class="icon"></span> Keep me Signed in</label>
 								</div>
 								<div class="group">
-									<input type="submit" class="button" value="Sign In">
+									<input type="submit" id="_submit" name="_submit" class="button" value="Sign In">
 								</div>
 								<div class="hr"></div>
 								<div class="foot-lnk">
 									<a href="#forgot">Forgot Password?</a>
 								</div>
-							</div>
+							</form>
 
-							<div class="sign-up-htm">
+							<form class="sign-up-htm">
 								<div class="group col-md-6">
 									<label for="user" class="label">Prénom</label>
 									<input id="user" type="text" class="input">
@@ -115,7 +118,7 @@
 								<div class="group col-md-12">
 									<input type="submit" class="button" value="Sign Up">
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
