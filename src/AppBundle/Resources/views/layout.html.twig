@@ -10,12 +10,17 @@
 
 	<!-- CSS -->
 	<link href="{{ app.request.basepath }}/lib/bootstrap/bootstrap.css" rel="stylesheet">
-	<link href="{{ app.request.basepath }}/css/index.css" rel="stylesheet">
+	<!--<link href="{{ app.request.basepath }}/css/index.css" rel="stylesheet">-->
+	<link href="{{ app.request.basepath }}/css/style.css" rel="stylesheet">
 	<!-- SCRIPT -->
 	<script src="{{ app.request.basepath }}/lib/jquery/jquery-3.1.1.js"></script>
 	<script src="{{ app.request.basepath }}/lib/bootstrap/bootstrap.js"></script>
 	<script src="{{ app.request.basepath }}/lib/angular/angular.min.js"></script>
+	<script src="{{ app.request.basepath }}/lib/script.js"></script>
+	<script src="{{ app.request.basepath }}/css/font-awesome/css/font-awesome.min.css"></script>
+
 </head>
+
 
 <body>
 	<div class="modal fade" id="myModal" role="dialog">
@@ -126,7 +131,7 @@
 		</div>
 	</div>
 
-	<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -138,22 +143,25 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="/">Accueil</a></li>
-					<!--					<li><a href="marche.html">Comment ça marche</a></li>-->
-
-					<li><a href="/profile">Mon profil</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#">Accueil</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Besoins</a></li>
+					<li><a href="#">Mon profil</a></li>
 					<li>
-						<button type="button" class="" data-toggle="modal" data-target="#myModal">Inscription / Login</button>
+						<button type="button" class="login" data-toggle="modal" data-target="#myModal">Inscription / Login</button>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	{% block body %}{% endblock %} {% block javascripts %}{% endblock %}
-	<footer>
 
+	
+	{% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+	
+	<footer>
+		<i class="fa fa-facebook-square fa-3x" aria-hidden="true" ></i>
+		<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+		<i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
 	</footer>
 
 
