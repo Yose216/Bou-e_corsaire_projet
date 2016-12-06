@@ -61,7 +61,7 @@ class Service
     }
     public function getStatut()
     {
-        return $this->title;
+        return $this->statut;
     }
     
 }
