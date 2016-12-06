@@ -1,5 +1,5 @@
 <?php
-// src/AppBundle/Entity/Services.php
+// src/AppBundle/Entity/Service.php
 namespace AppBundle\Entity;
 
 class Service 
@@ -36,7 +36,7 @@ class Service
     {
         return $this->title;
     }
-    public function setLevel($title)
+    public function setLevel($level)
     {
         $this->level = $level;
         return $level;
@@ -54,13 +54,14 @@ class Service
     {
         return $this->categorie;
     }
-    public function setTitle($statut)
+    public function setStatut($statut)
     {
         $this->statut = $statut;
         return $statut;
     }
-    public function getTitle()
+    public function getStatut()
     {
         return $this->title;
     }
+    
 }
