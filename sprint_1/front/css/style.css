@@ -5,14 +5,7 @@
 	border-radius: 0;
 }
 
-.navbar button {
-    margin-top: 12px;
-    background-color: #222;
-    border: 0px;
-    color: white;
-    text-transform: capitalize;
-    outline: inherit;
-}
+
 
 /* Add a gray background color and some padding to the footer */
 
@@ -428,3 +421,9 @@ button.close {
 .foot-lnk {
 	text-align: center;
 }
+/*
+.navbar button {
+	margin-top: 0!important;
+	padding : 15px;
+}
+*/

@@ -1,0 +1,489 @@
+/* ===================================
+    NAVBAR
+====================================== */
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	font-size: 13px;
+}
+
+.navbar button {
+	margin-top: 15px;
+	background-color: #222;
+	border: 0px;
+	color: white;
+	text-transform: capitalize;
+	outline: inherit;
+}
+.navbar-nav{
+	float: right;
+}
+
+
+
+
+
+/* Add a gray background color and some padding to the footer */
+
+footer {
+	background-color: #222;
+	padding: 25px;
+	height: 90px;
+	text-align: center;
+}
+
+.carousel-inner img {
+	/*width: 100%;*/
+	/* Set width to 100% */
+	margin: auto;
+	min-height: 200px;
+}
+.images{
+	width: 100%;
+	max-height: 450px;
+	
+}
+
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+
+@media (max-width: 600px) {
+	.carousel-caption {
+		display: none;
+	}
+}
+
+
+
+
+/* ===================================
+    MODAL
+====================================== */
+
+.modal-body {
+	padding-left: 0px;
+}
+
+.modal-header {
+	border: 0;
+	background: whitesmoke;
+}
+
+.modal-content {
+	background: whitesmoke;
+	height: 1050px;
+}
+
+.close,
+button.close {
+	color: #222;
+	padding: 20px;
+}
+
+.clearfix:after,
+.clearfix:before {
+	content: '';
+	display: table
+}
+
+.clearfix:after {
+	clear: both;
+	display: block
+}
+
+.login-wrap {
+	width: 100%;
+	margin: auto;
+	max-width: 525px;
+	min-height: 670px;
+	position: relative;
+}
+
+.login-html {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding: 90px 70px 50px 70px;
+	background: whitesmoke;
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition: all .4s linear;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+	display: none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+	text-transform: uppercase;
+}
+
+.login-html .tab {
+	font-size: 22px;
+	color: grey;
+	margin-right: 15px;
+	padding-bottom: 5px;
+	margin: 0 15px 10px 0;
+	display: inline-block;
+	border-bottom: 2px solid transparent;
+}
+
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab {
+	color: #222;
+	border-color: steelblue;
+	margin-bottom: 50px;
+}
+
+.login-form {
+	min-height: 345px;
+	position: relative;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+.login-form .group {
+	margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+	width: 100%;
+	color: #222;
+	display: block;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+	border: 1px solid steelblue;
+	background-color: whitesmoke;
+	padding: 15px 20px;
+	border-radius: 0;
+	outline: inherit;
+}
+
+.login-form .group .input:focus,
+.login-form .group .button:focus {
+	background-color: lightblue;
+}
+
+.login-form .group input[data-type="password"] {
+	text-security: circle;
+	-webkit-text-security: circle;
+}
+
+.login-form .group select {
+	padding: 15px 20px;
+	color: #333;
+	font-size: "Open Sans";
+	border: 1px solid steelblue;
+	outline: inherit;
+	background-color: whitesmoke;
+}
+
+.login-form .group option {
+	background-color: lightblue;
+	color: #333;
+	padding-top: 20px;
+	outline: 0;
+	border: 0;
+	font-size: 1em;
+}
+
+.login-form .group .label {
+	color: #222;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 0px;
+}
+
+.login-form .group .button {
+	background-color: steelblue;
+	color: whitesmoke;
+}
+
+.login-form .group label .icon {
+	width: 15px;
+	height: 15px;
+	border-radius: 2px;
+	position: relative;
+	display: inline-block;
+	background-color: lightgrey;
+}
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+	content: '';
+	width: 10px;
+	height: 2px;
+	background: #222;
+	position: absolute;
+	transition: all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before {
+	left: 3px;
+	width: 5px;
+	bottom: 6px;
+	transform: scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after {
+	top: 6px;
+	right: 0;
+	transform: scale(0) rotate(0);
+}
+
+.login-form .group .check:checked + label {
+	color: #333;
+}
+
+.login-form .group .check:checked + label .icon {
+	background: steelblue;
+}
+
+.login-form .group .check:checked + label .icon:before {
+	transform: scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked + label .icon:after {
+	transform: scale(1) rotate(-45deg);
+}
+
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
+	transform: rotate(0);
+}
+
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+	transform: rotate(0);
+}
+
+.hr {
+	height: 2px;
+	margin: 20px 0 20px 0;
+	background: rgba(255, 255, 255, .2);
+}
+
+.foot-lnk {
+	text-align: center;
+}
+
+/*=========================================
+            PAGE ACCUEIL
+==========================================*/
+
+
+.well{
+	margin-top: 30px;
+	height: 300px;
+	width: 800px;
+	margin-left: 190px;
+}
+.imgpres{
+	float: left;
+    height: 250px;
+    width: 50%;
+}
+.presentation{
+	color:black;
+	font-size: 16px;
+}
+.traitsimple{
+background-color: black;
+	height: 2pt;
+	width: 350px;
+	float: left;
+	margin-left: 20px;
+	
+}
+.trait{
+	background-color: black;
+	height: 3pt;
+	width: 1100px;
+	margin-left: 50px;
+}
+.textpres{
+    color: black;
+}
+.text{
+	color: black;
+}
+
+
+.cadre{
+	width: 300px;
+	height: 350px;
+	margin:15px;
+	border: 2px black;
+}
+
+.cadre img{
+    margin-top: 8px;
+    height: 150px;
+}
+
+.service{
+	margin-top: 15px;
+	height: 60px;
+	background-color: black;
+	border-radius: 10px;
+}
+
+.categorie{
+	margin-top: 15px;
+	height: 100px;
+	background-color: black;
+	border-radius: 10px;
+}
+.heure{
+	float: left;
+	background-color: green;
+	width: 30px;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+.info{
+	padding-top: 10px;
+	margin-left: 70px;
+ 
+}
+p{
+	color:white;
+	font-size: 12px;
+	margin-left: 70px;
+}
+.icone img{
+	height: 30px;
+	width: 30px;
+	float: left;
+	background-color: green;
+	width: 30px;
+	margin-top: 25px;
+	margin-left: 15px;
+}
+/*=====================================
+PAGE SERVICE ET BESOINS
+=======================================*/
+
+
+.bloc{
+    margin-left: 180px;
+}
+.recherche{
+    width: 87%;
+    height: 70px;
+    background-color: #FFD700;
+    margin-top: 20px;
+   
+}
+
+/*====================================
+PAGE PROFIL
+l=====================================*/
+
+*, *:before, *:after {
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+	position: relative;}
+
+body {
+  font-family: sans-serif;
+
+    }
+
+.wrapper {
+    width: 80%;
+    height: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 25px #222;
+  margin-top: 5%;
+  overflow: hidden;
+    }
+
+  .btn {
+        width: 30%;
+      float: left;
+      line-height: 30px;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+        }
+ .active {
+            font-weight: bold;
+             background: #ccc;
+            }
+
+hr {
+    display: block;
+  height: 0;
+  clear: both;
+  border: none;
+    }
+
+.slides {
+    width: auto;
+  height: 100%;
+  overflow: hidden;
+    }
+  .sld {
+    width: 100%;
+    height: 100%;
+  
+    text-align: center;
+    transition: margin .3s;
+    font-weight: bold;
+    }
+    .sld:first-of-type {
+    background-color: whitesmoke;
+    }
+    .slides .sld:nth-of-type(2) {
+    background: whitesmoke;
+    }
+    .slides .sld:nth-of-type(3) {
+    background: whitesmoke;
+    }
+ 
+
+.btn.active ~ .slides .sld:first-of-type {
+  margin-top: 0;
+    }
+.btn:nth-of-type(2).active ~ .slides .sld:first-of-type {
+  margin-top: -600px;    
+    }
+.btn:nth-of-type(3).active ~ .slides .sld:first-of-type {
+  margin-top: -1200px;
+    }
+
+   
+.form-group{
+	color:black;
+	margin: 0;
+	width: 900px;
+	text-align: left;
+	font-size: 12px;
+}
+
+.btnchoix{
+	width: 150px;
+	margin-right: 700px;
+}
+.btnsub{
+	margin-top: 15px;
+	width: 150px;
+}
