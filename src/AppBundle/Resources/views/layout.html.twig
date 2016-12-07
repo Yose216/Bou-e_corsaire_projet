@@ -18,6 +18,8 @@
 	<script src="{{ app.request.basepath }}/lib/angular/angular.min.js"></script>
 	<script src="{{ app.request.basepath }}/lib/script.js"></script>
 	<script src="{{ app.request.basepath }}/css/font-awesome/css/font-awesome.min.css"></script>
+	<!-- FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
 </head>
 
@@ -29,8 +31,8 @@
 			<!-- Modal content-->
 			<div class="modal-content">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
+
 				<div class="login-wrap">
-				<!-- Div a changer en formulaire -->
 					<div class="login-html">
 						<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
 						<label for="tab-1" class="tab">Sign In</label>
@@ -38,16 +40,92 @@
 						<label for="tab-2" class="tab">Sign Up</label>
 						
 						<div class="login-form">
-							<div class="sign-in-htm">
+							{% trans_default_domain 'FOSUserBundle' %}
+							<form class="sign-in-htm" action=="{{ path("fos_user_security_check") }}" method="post">
 							
-								{{ render(controller("FOSUserBundle:Security:login")) }}
-									
-							</div>
-							<div class="sign-up-htm">
-						
-								{{ render(controller("FOSUserBundle:Registration:register")) }}	
-						
-							</div>
+								<div class="group">
+									<label for="user" class="label">Username</label>
+									<input id="username" name="_username" type="text" class="input">
+								</div>
+								<div class="group">
+									<label for="pass" class="label">Password</label>
+									<input id="password" name="_password" type="password" class="input" data-type="password">
+								</div>
+								<div class="group">
+									<input id="remember_me" name="_remember_me" type="checkbox" class="check" checked>
+									<label for="check"><span class="icon"></span> Keep me Signed in</label>
+								</div>
+								<div class="group">
+									<input type="submit" id="_submit" name="_submit" class="button" value="Sign In">
+								</div>
+								<div class="hr"></div>
+								<div class="foot-lnk">
+									<a href="#forgot">Forgot Password?</a>
+								</div>
+							</form>
+
+							<form class="sign-up-htm">
+								<div class="group col-md-6">
+									<label for="user" class="label">Prénom</label>
+									<input id="user" type="text" class="input">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">Nom</label>
+									<input id="pass" class="input">
+								</div>
+
+								<div class="group col-md-6">
+									<label for="pass" class="label">Pseudo</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">Email</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label"> Password</label>
+									<input id="pass" type="password" class="input" data-type="password">
+								</div>
+
+								<div class="group col-md-12">
+									<label for="pass" class="label">Repeat Password</label>
+									<input id="pass" type="password" class="input" data-type="password">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">Code Postal</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-6">
+									<label for="pass" class="label">téléphone</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label">Status téléphone</label>
+									<select class="col-md-12">
+										<option>Public</option>
+										<option>Pour vos contact</option>
+										<option>Pour les utilisteurs</option>
+										<option>Privé</option>
+									</select>
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label">Vos services</label>
+									<input id="pass" type="text" class="input">
+								</div>
+								<div class="group col-md-12">
+									<label for="pass" class="label">Catégorie</label>
+									<select class="col-md-12">
+										<option>Exemple 1</option>
+										<option>Exemple 2</option>
+										<option>Exemple 3</option>
+										<option>Exemple 4</option>
+									</select>
+								</div>
+
+								<div class="group col-md-12">
+									<input type="submit" class="button" value="Sign Up">
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -63,16 +141,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Logo</a>
+				<a class="navbar-brand" href="#">Bouée Corsaire</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Accueil</a></li>
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Besoins</a></li>
 					<li><a href="#">Mon profil</a></li>
 					<li>
-						<button href="#myModal" type="button" class="" data-toggle="modal" data-target="#myModal">Inscription / Login</button>
+						<button type="button" class="login" data-toggle="modal" data-target="#myModal">Inscription & connexion</button>
 					</li>
 				</ul>
 			</div>
