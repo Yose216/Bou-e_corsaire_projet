@@ -14,7 +14,7 @@ imports:
 
 parameters:
 
-    locale: en
+    locale: fr
 
 
 
@@ -22,7 +22,7 @@ framework:
 
     #esi:             ~
 
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
 
     secret:          "%secret%"
 
