@@ -14,7 +14,7 @@ imports:
 
 parameters:
 
-    locale: en
+    locale: fr
 
 
 
@@ -22,7 +22,7 @@ framework:
 
     #esi:             ~
 
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
 
     secret:          "%secret%"
 
@@ -34,7 +34,7 @@ framework:
 
     form:            ~
 
-    csrf_protection: true
+    csrf_protection: ~
 
     validation:      { enable_annotations: true }
 
@@ -149,8 +149,5 @@ fos_user:
     registration:
         form:
             type: AppBundle\Form\RegistrationType
-#        confirmation:
-#            enabled:    true 
-#            template:   FOSUserBundle:Registration:email.txt.twig    
             # if you are using Symfony < 2.8 you should use the type name instead
             # type: app_user_registration
