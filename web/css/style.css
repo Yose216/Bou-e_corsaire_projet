@@ -859,8 +859,11 @@ button.close {
 .info, .identite{
 	
 	color: white;
-	
+padding:15px;
+color:white;	
 	font-size: 12px;
+text-align:left;
+
 }
 
 .icone img{
@@ -870,13 +873,17 @@ button.close {
 	background-color: limegreen;
 	margin: 15px;
 }
+
+.pave{
+margin-left:100px;
+}
 /*=====================================
 PAGE SERVICE ET BESOINS
 =======================================*/
 
 
 .bloc{
-    margin-left: 180px;
+    margin:180px;
 }
 .recherche{
     width: 87%;
