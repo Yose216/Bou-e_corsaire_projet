@@ -35,4 +35,12 @@ class DefaultController extends Controller
     {
         return $this->render('besoin.html.twig');
     }
+	
+	/**
+     * @Route("/service", name="servicepage")
+     */
+	public function serviceAction()
+    {
+        return $this->render('service.html.twig');
+    }
 }

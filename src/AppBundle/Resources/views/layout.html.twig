@@ -62,12 +62,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Bouée Corsaire</a>
+				<a class="navbar-brand" href="{{ path('homepage') }}">Bouée Corsaire</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Besoins</a></li>
+					<li><a href="{{ path('servicepage') }}">Services</a></li>
+					<li><a href="{{ path('besoinpage') }}">Besoins</a></li>
 					<li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a></li>
 					{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 					<li class="dropdown">
