@@ -1,5 +1,73 @@
 {% extends 'AppBundle::layout.html.twig' %} 
 {% block body %}
+<body>
 
+	
+    
+<div class="bloc">
+	<div class="recherche">
+       <form class="search">
+      <div class="form-rech ">
+        <input type="search" class="input-lg" placeholder="Recherche">
+      </div>
+           <div class="form-rech">
+                  <select class="selectpicker">
+                    <option>Informatique</option>
+                    <option>Animal</option>
+                    <option>Cuisine</option>
+                    <option>Enfant</option>
+                  </select>
+      </div>
+       <div class="form-rech">
+        <input type="search" class=" form-control taille" placeholder="Code postale">
+      </div>
+   
+    </form>
+       
+      <button type="submit" class="btnch btn-primary">Rechercher</button>
+
+    </div>
+		<br>
+		<div class="row ">
+			<div class="col-sm-4 cadre">
+				<img src="{{ app.request.basepath }}/images/travaux.jpeg" class="img-responsive cadreimg" alt="Image">
+				<div class="service">
+				<div class="heure"><p class="nbheure">H</p></div>
+					<p class="info">Service<br>Catégorie</p>
+				</div>
+				<div class="categorie">
+				<div class="icone"><img src=""></div>
+					<p class="identite">Nom Prénom<br>code postal<br>Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+				</div>
+			</div>
+				
+    </div>
+            
+	<br>
+<div class="col-md-12 text-center">
+               <!--Pagination-->
+               <nav aria-label="Page navigation">
+                   <ul class="pagination">
+                       <li>
+                           <a href="#" aria-label="Previous">
+                               <span aria-hidden="true">&laquo;</span>
+                           </a>
+                       </li>
+                       <li><a href="#">1</a></li>
+                       <li><a href="#">2</a></li>
+                       <li><a href="#">3</a></li>
+                       <li><a href="#">4</a></li>
+                       <li><a href="#">5</a></li>
+                       <li>
+                           <a href="#" aria-label="Next">
+                               <span aria-hidden="true">&raquo;</span>
+                           </a>
+                       </li>
+                   </ul>
+               </nav>
+           </div>
+	
+
+</body>
 
 {% endblock %}

@@ -883,15 +883,63 @@ PAGE SERVICE ET BESOINS
 
 
 .bloc{
-    margin:180px;
+    margin-left: 180px;
 }
 .recherche{
     width: 87%;
-    height: 70px;
-    background-color: #FFD700;
+    height: 100px;
+    background-color: orangered;
     margin-top: 20px;
-   
+	display: inline-flex;
+	margin-bottom: 35px;
 }
+.form-rech{
+	display: inline-flex;
+	margin-top: 20px;
+	margin-left: 25px;
+	
+
+	
+}
+.input-lg{
+	margin-left: 30px;
+	height: 50px;
+	font-size: 13px;
+	width: 300px;
+	border:1px grey solid;
+}
+
+.taille, .selectpicker{
+	height: 50px!important;
+	text-align: center;
+	width: 150px;
+	border:1px grey solid;
+	background-color: white;
+}
+
+.btnch{
+	width: 150px;
+	height: 50px;
+	margin-top: 22px;
+	margin-left: 50px;
+	border:1px grey solid;
+	
+}
+.rech{
+	font-size: 13px;
+}
+
+.pagination > li > a, .pagination > li > span {
+  
+    color: crimson;
+    text-decoration: none;
+    border: 0;
+}
+
+placeholder{
+	font-size: 14px;
+}
+
 
 /*====================================
 PAGE PROFIL
