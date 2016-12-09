@@ -33,6 +33,6 @@ class DefaultController extends Controller
      */
 	public function besoinAction()
     {
-        return new Response('<html><body>Admin page!</body></html>');
+        return $this->render('besoin.html.twig');
     }
 }
