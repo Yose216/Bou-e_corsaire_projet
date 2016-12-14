@@ -10,83 +10,41 @@ use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
 
 class ProfileFormType extends AbstractType
 {
-    /**
-     * @var string
-     */
-    private $class;
-
-    /**
-     * @param string $class The User class name
-     */
-    public function __construct($class)
-    {
-        $this->class = $class;
-    }
-
-    /**
+   /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $this->buildUserForm($builder, $options);
-
-        $constraintsOptions = array(
-            'message' => 'fos_user.current_password.invalid',
-        );
-
-        if (!empty($options['validation_groups'])) {
-            $constraintsOptions['groups'] = array(reset($options['validation_groups']));
-        }
-
-        $builder->add('current_password', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'), array(
-            'label' => 'form.current_password',
-            'translation_domain' => 'FOSUserBundle',
-            'mapped' => false,
-            'constraints' => new UserPassword($constraintsOptions),
-        ));
+        $builder->add('addresse')->add('nom')->add('pseudo')->add('email')->add('password')->add('ville')->add('region')->add('codepostal')->add('telephone')->add('choix_tel')->add('img');
     }
-
+    
     /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolver $resolver)
+public function getParent()
+
     {
-        $resolver->setDefaults(array(
-            'data_class' => $this->class,
-            'csrf_token_id' => 'profile',
-            // BC for SF < 2.8
-            'intention' => 'profile',
-        ));
+
+        return 'FOS\UserBundle\Form\Type\ProfileFormType';
+
     }
 
-    // BC for SF < 3.0
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return $this->getBlockPrefix();
-    }
 
-    /**
-     * {@inheritdoc}
-     */
+
     public function getBlockPrefix()
+
     {
-        return 'fos_user_profile';
+
+        return 'app_user_profile';
+
     }
 
-    /**
-     * Builds the embedded form representing the user.
-     *
-     * @param FormBuilderInterface $builder
-     * @param array                $options
-     */
-    protected function buildUserForm(FormBuilderInterface $builder, array $options)
+
+    public function getName()
+
     {
-        $builder
-            ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle'))
-            ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'), array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
-        ;
+
+        return $this->getBlockPrefix();
+
     }
 }

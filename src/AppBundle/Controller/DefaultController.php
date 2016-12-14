@@ -29,6 +29,14 @@ class DefaultController extends Controller
     }
 	
 	/**
+     * @Route("/admin/user", name="supUser")
+     */
+	public function adminDelete()
+    {
+        return new Response('<html><body>Admin page for delete user!</body></html>');
+    }
+	
+	/**
      * @Route("/besoin", name="besoinpage")
      */
 	public function besoinAction()
