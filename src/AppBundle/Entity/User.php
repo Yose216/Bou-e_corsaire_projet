@@ -23,27 +23,73 @@ class User extends BaseUser
      * @ORM\Column(type="string")
      */
     protected $addresse;
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+	 */
+	protected $nom;
+	
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255)
+	 */
+	protected $prenom;
+	
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="ville", type="string", length=255)
+	 */
+	protected $ville;
 
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="region", type="string", length=255)
+	 */
+	protected $region;
+	
+	/**
+     * @var int
+     *
+     * @ORM\Column(name="codePostale", type="integer")
+     */
+
+	protected $codepostal;
+	
+	/**
+     * @var int
+     *
+     * @ORM\Column(name="ratioHeure", type="integer")
+     */
+
+	protected $ratioheure;
+
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=255)
+	 */
+	protected $telephone;
+	
+	
     public function __construct()
     {
         parent::__construct();
     }
-/**
-     * @ORM\Column(type="string")
-     */
-protected $nom;
 
-protected $pseudo;
-protected $email;
-protected $ville;
-protected $region;
-protected $codepostal;
-protected $ratioheure;
-
-protected $compteactif;
-protected $telephone;
-protected $choix_tel;
-protected $img;
+	/**
+   	* @ORM\OneToMany(targetEntity="AppBundle\Entity\Besoin", mappedBy="user")
+   	*/
+  private $besoins;
+	
+	/**
+   	* @ORM\OneToMany(targetEntity="AppBundle\Entity\Service", mappedBy="user")
+   	*/
+  private $services;
+	
     /**
      * Set addresse
      *
@@ -90,6 +136,30 @@ protected $img;
     public function getNom()
     {
         return $this->nom;
+    }
+	
+	/**
+     * Set prenom
+     *
+     * @param string $prenom
+     *
+     * @return User
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
     }
 
     /**
@@ -307,4 +377,25 @@ protected $img;
     {
         return $this->img;
     }
+	
+	public function setBesoins(Besoin $besoin)
+  {
+    $this->besoins = $besoin;
+  }
+
+  public function getBesoins()
+  {
+    return $this->besoins;
+  }
+	
+	public function setServices(Service $service)
+  {
+    $this->services = $service;
+  }
+
+  public function getServices()
+  {
+    return $this->services;
+  }
+	
 }

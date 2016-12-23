@@ -1,10 +1,21 @@
-{% extends 'AppBundle::layout.html.twig' %}
-{% block body %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Profil</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="css/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
 
 <body>
-<h4>Hello, {{ user.username }}</h4>
+<h4>Hello, {{prénom}}</h4>
 <h5>Quisque ut varius diam. Proin eget nulla et ipsum condimentum sodales.</h5>
-	
 <div class="trait"></div>
 	
 <div class="wrapper">
@@ -21,15 +32,15 @@
   <h2>Détails du compte</h2>
   <form>
     <div class="form-group">
-      <label for="nom">Nom: {{ user.nom }}</label>
+      <label for="nom">Nom:</label>
      
     </div>
 	     <div class="form-group">
-      <label for="prenom">Prénom: {{ user.username }}</label>
+      <label for="prenom">Prénom:</label>
     
     </div>
 	     <div class="form-group">
-      <label for="pseudo">Email: {{ user.email }}</label>
+      <label for="pseudo">Pseudo:</label>
 
     </div>
     <div class="form-group">
@@ -94,23 +105,17 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div><h2>vos services</h2></div>
-				{% for service in user.services %}
 				<div class="serv">
-				<div class="temps"> {{service.heure}}h</div>
-					<div class="infoser">{{service.title}} <br> {{service.categorie}}</div>
-				</div>
-				{% endfor %}
+				<div class="temps">h</div>
+					<div class="infoser">Service<br>catégorie</div>
+				</div>	
 			</div>
-  					
 			<div class="col-sm-6">
 				<div><h2>vos Besoins</h2></div>
-				{% for besoin in user.besoins %} 
 				<div class="besoin">
-				<div class="temps"> {{besoin.heure}}h</div>
-					<div class="infobes"> {{besoin.title}} <br> {{besoin.categorie}} </div>
-					
+				<div class="temps">h</div>
+					<div class="infobes">Besoin<br>catégorie</div>
 				</div>	
-				{% endfor %}
 			</div>
 			</div>
 	
@@ -126,4 +131,6 @@
 });
 	</script>
 
-{% endblock %}
+</body>
+
+</html>

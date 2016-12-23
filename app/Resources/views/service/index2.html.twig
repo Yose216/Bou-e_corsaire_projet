@@ -1,0 +1,55 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block body %}
+    <h1>Services list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Heure</th>
+                <th>Categorie</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Codepostal</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td><a href="{{ path('service_show', { 'id': service.id }) }}">{{ service.id }}</a></td>
+                <td>{{ service.title }}</td>
+                <td>{{ service.image }}</td>
+                <td>{{ service.heure }}</td>
+                <td>{{ service.categorie }}</td>
+                <td>{{ service.nom }}</td>
+                <td>{{ service.prenom }}</td>
+                <td>{{ service.adresse }}</td>
+                <td>{{ service.codePostal }}</td>
+                <td>{{ service.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('service_show', { 'id': service.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('service_edit', { 'id': service.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('service_new') }}">Create a new service</a>
+        </li>
+    </ul>
+{% endblock %}

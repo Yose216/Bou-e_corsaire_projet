@@ -1,4 +1,4 @@
-{% extends 'AppBundle::layout.html.twig' %} 
+{% extends 'AppBundle::layout.html.twig' %}
 {% block body %}
 <body>
 
@@ -30,17 +30,19 @@
     </div>
 		<br>
 		<div class="row ">
+			{% for besoin in besoins %}
 			<div class="col-sm-4 cadre">
 				<img src="{{ app.request.basepath }}/images/besoin.jpeg" class="img-responsive cadreimg" alt="Image">
 				<div class="service">
-				<div class="heure"><p class="nbheure">H</p></div>
-					<p class="info">Besoin<br>Catégorie</p>
+				<div class="heure"><p class="nbheure">{{ besoin.heure }}</p></div>
+					<p class="info">{{ besoin.title }}<br>{{ besoin.categorie }}</p>
 				</div>
 				<div class="categorie">
 				<div class="icone"><img src=""></div>
-					<p class="identite">Nom Prénom<br>code postal<br>Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+					<p class="identite">{{ advert.title }}<br>{{ besoin.codePostale }}<br>{{ besoin.description }}</p>
 				</div>
 			</div>
+			{% endfor %}
 				
     </div>
             

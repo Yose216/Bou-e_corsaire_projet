@@ -1,4 +1,4 @@
-{% extends 'AppBundle::layout.html.twig' %} 
+{% extends 'AppBundle::layout.html.twig' %}
 {% block body %}
 <body>
 
@@ -13,10 +13,11 @@
            <div class="form-rech">
                   <select class="selectpicker">
                     <option>Informatique</option>
-                    <option>Animal</option>
-                    <option>Cuisine</option>
-                    <option>Enfant</option>
+                    <option>Aide ménage</option>
+                    <option>Aide devoir</option>
+                    <option>Réparation</option>
                   </select>
+  
       </div>
        <div class="form-rech">
         <input type="search" class=" form-control taille" placeholder="Code postale">
@@ -29,19 +30,20 @@
     </div>
 		<br>
 		<div class="row ">
-			{% for service in services %}
+			{% for besoin in besoins %}
 			<div class="col-sm-4 cadre">
-				<img src="{{ app.request.basepath }}/images/travaux.jpeg" class="img-responsive cadreimg" alt="Image">
+				<img src="{{ app.request.basepath }}/images/besoin.jpeg" class="img-responsive cadreimg" alt="Image">
 				<div class="service">
-				<div class="heure"><p class="nbheure">{{ service.heure }}</p></div>
-					<p class="info">{{ service.title }}<br>Catégorie</p>
+				<div class="heure"><p class="nbheure">{{ besoin.heure }}</p></div>
+					<p class="info">{{ besoin.title }}<br>{{ besoin.categorie }}</p>
 				</div>
 				<div class="categorie">
 				<div class="icone"><img src=""></div>
-					<p class="identite">{{ service.nom }} {{ service.prenom }}<br>{{ service.codePostal }}<br>{{ service.description }}</p>
+					<p class="identite">{{ besoin.user}} <br>{{ besoin.codePostale }}<br>{{ besoin.description }}</p>
 				</div>
 			</div>
 			{% endfor %}
+				
     </div>
             
 	<br>

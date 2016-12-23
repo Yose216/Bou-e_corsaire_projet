@@ -1,0 +1,15 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% block body %}
+
+<h1>Admin page</h1>
+<a href="{{ path('service_new') }}"><p>New service</p></a>
+<a href="{{ path('besoin_new') }}"><p>New besoin</p></a>
+{% for service in services %}
+<a href="{{ path('service_show', { 'id': service.id }) }}"><p>show service : {{service.id}}</p></a>
+
+{% endfor %}
+{% for besoin in besoins %}
+<a href="{{ path('besoin_show', { 'id': besoin.id }) }}"><p>show besoin : {{besoin.id}}</p></a>
+
+{% endfor %}
+{% endblock %}

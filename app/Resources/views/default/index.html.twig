@@ -67,6 +67,7 @@
    
     <div class="pave">
 		<div class="row">
+<!--
 			<div class="col-sm-4 cadre">
 				<img src="{{ app.request.basepath }}/images/plombier.jpeg" class="img-responsive" style="width:100%" alt="Image">
 				<div class="service">
@@ -79,6 +80,22 @@
 				</div>
 			
 			</div>
+-->
+			{% for besoin in besoins | slice(0,6) %}
+			<div class="col-sm-4 cadre">
+				<img src="{{ app.request.basepath }}/images/besoin.jpeg" class="img-responsive cadreimg" alt="Image">
+				<div class="service">
+				<div class="heure"><p class="nbheure">{{ besoin.heure }}H</p></div>
+					<p class="info">{{ besoin.title }}<br>{{ besoin.categorie }}</p>
+				</div>
+				<div class="categorie">
+				<div class="icone"><img src=""></div>
+					<p class="identite">
+						{{ besoin.user.prenom}} {{ besoin.user.nom }}
+  					<br>{{ besoin.codePostale }}<br>{{ besoin.description }}</p>
+				</div>
+			</div>
+			{% endfor %}
 
 		</div>
 	</div>

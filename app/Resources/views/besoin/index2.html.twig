@@ -1,0 +1,55 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block body %}
+    <h1>Besoins list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Heure</th>
+                <th>Categorie</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Codepostale</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for besoin in besoins %}
+            <tr>
+                <td><a href="{{ path('besoin_show', { 'id': besoin.id }) }}">{{ besoin.id }}</a></td>
+                <td>{{ besoin.title }}</td>
+                <td>{{ besoin.image }}</td>
+                <td>{{ besoin.heure }}</td>
+                <td>{{ besoin.categorie }}</td>
+                <td>{{ besoin.nom }}</td>
+                <td>{{ besoin.prenom }}</td>
+                <td>{{ besoin.adresse }}</td>
+                <td>{{ besoin.codePostale }}</td>
+                <td>{{ besoin.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('besoin_show', { 'id': besoin.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('besoin_edit', { 'id': besoin.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('besoin_new') }}">Create a new besoin</a>
+        </li>
+    </ul>
+{% endblock %}
