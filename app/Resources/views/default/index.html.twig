@@ -28,7 +28,7 @@
 				<div class="carousel-caption">
 				    <img src="{{ app.request.basepath }}/images/help.svg" alt="">
 					<h3>Besoins</h3>
-					<p>Toujours de la bonne personne</p>
+					<p>Toujours besoin de la bonne personne</p>
 				</div>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 
 			<!--<div class="col-sm-12">-->
 				<div class="well">
-				<img class="imgpres" src="{{ app.request.basepath }}/images/boueecorsaire.jpg">
+				<img class="imgpres" src="{{ app.request.basepath }}/images/logo_boue_corsaire.jpg">
                 <div class="text-presentation">
                     <p class="presentation">Troc & Co</p>
                     <div class="traitsimple"></div>
@@ -89,16 +89,17 @@
 					<p class="info">{{ besoin.title }}<br>{{ besoin.categorie }}</p>
 				</div>
 				<div class="categorie">
-				<div class="icone"><img src=""></div>
+				<div class="heure"><img src=""></div>
 					<p class="identite">
 						{{ besoin.user.prenom}} {{ besoin.user.nom }}
-  					<br>{{ besoin.codePostale }}<br>{{ besoin.description }}</p>
+  					<br>{{ besoin.user.codepostal }}<br>{{ besoin.description }}</p>
 				</div>
 			</div>
 			{% endfor %}
 
 		</div>
 	</div>
+</div>
 	<br>
 
 {% endblock %}

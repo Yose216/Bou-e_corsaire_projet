@@ -30,14 +30,6 @@
                 <td>{{ service.user }}</td>
             </tr>
             <tr>
-                <th>Adresse</th>
-                <td>{{ service.adresse }}</td>
-            </tr>
-            <tr>
-                <th>Codepostal</th>
-                <td>{{ service.codePostal }}</td>
-            </tr>
-            <tr>
                 <th>Description</th>
                 <td>{{ service.description }}</td>
             </tr>
@@ -51,10 +43,6 @@
         <li>
             <a href="{{ path('service_edit', { 'id': service.id }) }}">Edit</a>
         </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
+
     </ul>
 {% endblock %}

@@ -19,47 +19,52 @@
       <div class="sld" id="#one">
       <div class="container">
   <h2>Détails du compte</h2>
-  <form>
+		  <div class="col-md-6 fr">
     <div class="form-group">
       <label for="nom">Nom: {{ user.nom }}</label>
      
     </div>
 	     <div class="form-group">
-      <label for="prenom">Prénom: {{ user.username }}</label>
+      <label for="prenom">Prénom: {{ user.prenom }}</label>
+
+    </div>
+	<div class="form-group">
+      <label for="prenom">Nom d'utilisateur: {{ user.username }}</label>
     
     </div>
 	     <div class="form-group">
       <label for="pseudo">Email: {{ user.email }}</label>
 
     </div>
-    <div class="form-group">
-      <label for="pwd">Mot de passe:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter votre mot de passe">
+			  </div>
+		  <div class="col-md-6 fr">
+	<div>
+		<div class="form-group">
+    		<label for="tel">Adresse: {{ user.addresse }}</label>
+		</div>
     </div>
-	     <div class="form-group">
-      <label for="repeatpwd">Répeter mot de passe:</label>
-      <input type="password" class="form-control" id="repeatpwd" placeholder="Enter a nouveau votre mot de passe">
+	<div>
+		<div class="form-group">
+    		<label for="tel">Ville: {{ user.ville }}</label>
+		</div>
     </div>
-	     <div class="form-group">
-      <label for="codepostal">Code postal:</label>
-      <input type="codepostal" class="form-control" id="codepostal" placeholder="Enter votre code postal">
+	<div>
+		<div class="form-group">
+    		<label for="tel">Region: {{ user.region }}</label>
+		</div>
     </div>
-	     <div class="form-group">
-      <label for="tel">Téléphone:</label>
-      <input type="telephone" class="form-control" id="tel" placeholder="Enter votre numéro de téléphone">
+	<div >
+		<div class="form-group">
+    		<label for="codepostal">Code postal: {{ user.codePostal }}</label>
+		</div>
     </div>
-      
-	     <div class="form-group">
-      <label for="status">Status téléphone:</label>
-                  <select class="col-md-12 tel">
-                    <option>Public</option>
-                    <option>Pour vos contact</option>
-                    <option>Pour les utilisteurs</option>
-                    <option>Privé</option>
-                  </select>
+	<div>
+		<div class="form-group">
+    		<label for="tel">Téléphone: {{ user.telephone }}</label>
+		</div>
     </div>
-    <button type="submit" class="btn btn-default btnsub">Submit</button>
-  </form>
+			  </div>
+  	<a type="button" class="btn btn-primary btnInfo col-lg-offset-2" href="{{ path('fos_user_profile_edit') }}">Edition de mes informations</a>
 	  </div>
 	    </div>
 
@@ -67,7 +72,7 @@
 		 <h2>Votre messagerie</h2>	 
       </div>
       <div class="sld" id="#three">
-      	<div class="">
+      	<div class="formulaire">
       	<h2>Formulaire de confirmation de service rendu</h2>
        <form class="search">
       <div class="form-mail ">
@@ -92,25 +97,29 @@
 		  </div>
    <div class="blocs">
 		<div class="row">
-			<div class="col-sm-6">
-				<div><h2>vos services</h2></div>
+			<div class="col-md-6">
+				<div><h2 class="ser">Vos services</h2></div>
 				{% for service in user.services %}
 				<div class="serv">
 				<div class="temps"> {{service.heure}}h</div>
 					<div class="infoser">{{service.title}} <br> {{service.categorie}}</div>
 				</div>
 				{% endfor %}
+				<div>
+					<a type="button" class="btn btn-primary btnInfo btnBesoin col-md-offset-3" href="{{ path('service_new') }}">Ajouter un service</a>
+				</div>
 			</div>
   					
-			<div class="col-sm-6">
-				<div><h2>vos Besoins</h2></div>
+			<div class="col-md-6">
+				<div><h2 class="bes">Vos besoins</h2></div>
 				{% for besoin in user.besoins %} 
 				<div class="besoin">
-				<div class="temps"> {{besoin.heure}}h</div>
+					<div class="temps"> {{besoin.heure}}h</div>
 					<div class="infobes"> {{besoin.title}} <br> {{besoin.categorie}} </div>
-					
-				</div>	
+				</div>
 				{% endfor %}
+
+				<a type="button" class="btn btn-primary btnInfo btnBesoin col-md-offset-4" href="{{ path('besoin_new') }}">Ajouter un besoin</a>
 			</div>
 			</div>
 	

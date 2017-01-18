@@ -2,10 +2,8 @@
 {% block body %}
 <body>
 
-	
-    
 <div class="bloc">
-	<div class="recherche">
+	<div class="recherche ">
        <form class="search">
       <div class="form-rech ">
         <input type="search" class="input-lg" placeholder="Recherche">
@@ -29,17 +27,17 @@
 
     </div>
 		<br>
-		<div class="row ">
+		<div class="row">
 			{% for besoin in besoins %}
 			<div class="col-sm-4 cadre">
 				<img src="{{ app.request.basepath }}/images/besoin.jpeg" class="img-responsive cadreimg" alt="Image">
 				<div class="service">
-				<div class="heure"><p class="nbheure">{{ besoin.heure }}</p></div>
+				<div class="heure"><p class="nbheure">{{ besoin.heure }}H</p></div>
 					<p class="info">{{ besoin.title }}<br>{{ besoin.categorie }}</p>
 				</div>
 				<div class="categorie">
-				<div class="icone"><img src=""></div>
-					<p class="identite">{{ besoin.user}} <br>{{ besoin.codePostale }}<br>{{ besoin.description }}</p>
+				<div class="heure"><img src=""/></div>
+					<p class="identite">{{ besoin.user.prenom}} {{ besoin.user.nom }} <br>{{ besoin.user.codePostal }}<br>{{ besoin.description }}</p>
 				</div>
 			</div>
 			{% endfor %}
@@ -47,10 +45,10 @@
     </div>
             
 	<br>
-<div class="col-md-12 text-center">
+<div class="col-md-8 col-lg-offset-4">
                <!--Pagination-->
-               <nav aria-label="Page navigation">
-                   <ul class="pagination">
+               <nav aria-label="Page navigation ">
+                   <ul class="pagination ">
                        <li>
                            <a href="#" aria-label="Previous">
                                <span aria-hidden="true">&laquo;</span>
@@ -70,7 +68,7 @@
                </nav>
            </div>
 	
-
+	</div>
 </body>
 
 {% endblock %}

@@ -62,10 +62,10 @@ class User extends BaseUser
 	/**
      * @var int
      *
-     * @ORM\Column(name="ratioHeure", type="integer")
+     * @ORM\Column(name="ratioHeure", type="integer", nullable=true)
+	 *
      */
-
-	protected $ratioheure;
+	protected $ratioheure = null;
 
 	/**
      * @var string

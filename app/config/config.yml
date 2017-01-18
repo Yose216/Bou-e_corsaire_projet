@@ -92,7 +92,7 @@ doctrine:
 
         user:     "root"
 
-        password: "password"
+        password: ""
 
         charset:  UTF8
 

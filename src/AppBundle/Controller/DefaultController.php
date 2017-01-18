@@ -20,7 +20,7 @@ class DefaultController extends Controller
 
 		$em = $this->getDoctrine()->getManager();
 		//$user = $besoins->getUser();
-		$besoins = $em->getRepository('AppBundle:Besoin')->findAll();
+		$besoins = $em->getRepository('AppBundle:Besoin')->findAllOrderedById();
 		$user = $em->getRepository('AppBundle:User')->findAll();
 		//$userCo = $this->getUser();
 		

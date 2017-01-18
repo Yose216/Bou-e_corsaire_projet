@@ -88,7 +88,7 @@ body {
 
 .navbar button {
 
-    background-color: orangered;
+    background-color: #98712A;
 
     height: 60px;
 
@@ -841,7 +841,7 @@ button.close {
 }
 .heure{
 	float: left;
-	background-color: limegreen;
+	background-color: #98712A;
 	width: 30px;
 	height: 37px;
 	margin:15px;
@@ -851,9 +851,10 @@ button.close {
 }
 
 .nbheure{
-	padding: 10px;
+	padding-top: 10px;
+	padding-left: 4px;
 	color: white;
-	font-size: 12px;
+	font-size: 14px;
 	
 }
 .info, .identite{
@@ -877,6 +878,13 @@ text-align:left;
 .pave{
 margin-left:100px;
 }
+footer{
+	width: 100%;
+	height:200px;
+	background-color: #001C3D;
+	padding:0!important;
+	margin:0!important;
+}
 /*=====================================
 PAGE SERVICE ET BESOINS
 =======================================*/
@@ -888,7 +896,7 @@ PAGE SERVICE ET BESOINS
 .recherche{
     width: 87%;
     height: 100px;
-    background-color: orangered;
+    background-color: #98712A;
     margin-top: 20px;
 	display: inline-flex;
 	margin-bottom: 35px;
@@ -923,6 +931,8 @@ PAGE SERVICE ET BESOINS
 	margin-top: 22px;
 	margin-left: 50px;
 	border:1px grey solid;
+	background-color: #001C3D!important;
+	border-color: #001C3D!important;
 	
 }
 .rech{
@@ -1089,8 +1099,6 @@ hr {
   .sld {
     width: 100%;
     height: 100%;
-  
-   
     transition: margin .3s;
     font-weight: bold;
     }
@@ -1109,16 +1117,31 @@ hr {
   margin-top: 0;
     }
 .btn:nth-of-type(2).active ~ .slides .sld:first-of-type {
-  margin-top: -520px;    
+  margin-top: -520px;
+
     }
 .btn:nth-of-type(3).active ~ .slides .sld:first-of-type {
   margin-top: -1040px;
+	
     }
 
 /*===============================================
 mes informations
 ================================================*/
+.fr{
+	margin-top: 45px;
+	margin-left: 35px;
+	width: 40%;
+	margin-bottom: 45px;
 
+}
+.btned{
+	font-size: 16px;
+	width: 200px;
+	margin-left: 100px;
+	color:black;
+	background-color: blue;
+}
 h4, h5{
 	text-align:center;
 	margin-bottom: 20px;
@@ -1128,10 +1151,13 @@ h4, h5{
 .form-group{
 	color:black;
 	margin: 0;
-	width: 600px;
+	width: 50%;
 	display:flex;
 	font-size: 10px;
-	margin-left: 25px;
+	/*margin-left: 25px;*/
+}
+label{
+	font-size: 15px;
 }
 .form-control{
 	font-size: 8px;
@@ -1146,7 +1172,7 @@ h4, h5{
 h2{
 	font-size: 16px;
 	font-weight: bold;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	padding-top: 20px;
 	margin-left: 20px;
 }
@@ -1173,29 +1199,33 @@ width: 20%;
 /*=================================================
 mes services/besoins
 ==================================================*/
-
+.bes, .ser{
+	text-align: center;
+}
 .progress{
 	width: 80%;
 	margin-left: 35px;
+	margin-bottom: -15px;
 }
 
 .serv, .besoin{
 	margin-top: 15px;
-	margin-left: 15px;
+	margin-left: 40px;
 	height: 50px;
 	background-color: black;
 	width: 80%;
+	margin-bottom: 25px;
 }
 
 .temps{
 	float: left;
-	background-color: green;
+	background-color: #98712A;
 	width: 30px;
 	height: 25px;
 	margin-top: 15px;
 	margin-left: 25px;
 	padding-top: 5px;
-	padding-left: 10px;
+	padding-left: 5px;
 	color: white;
 	font-size: 12px;
 }
@@ -1211,16 +1241,17 @@ mes services/besoins
 }
 .form-mail{
 	display: inline-flex;
-	margin-top: 40px;
+	
 	margin-left: 25px;
 }
 .form-temps{
 	display: inline-flex;
-	margin-top: 40px;
+	
 	margin-left: 25px;
 	
 }
 .input-lg-mail{
+	
 	margin-left: 15px;
 	height: 35px;
 	font-size: 11px;
@@ -1236,4 +1267,62 @@ mes services/besoins
 	margin-left: 10px;
 }
 
+.btnaj{
+	font-size: 14px;
+	width: 120px;
+	margin-left: 125px;
+	color:black;
+	background-color: antiquewhite;
+	
+}
 
+.plan a,
+.Social a,
+.Contact a{
+	text-decoration: none;
+	color: whitesmoke;
+	display: block;
+}
+
+.plan,
+.Contact,
+.Social,
+.Mention{
+	color: whitesmoke;
+}
+
+.Mention a {
+	color: #98712A;
+}
+
+.Mention {
+	padding-top: 40px;
+}
+
+.Mention p {
+	margin-bottom: 0px!important;
+}
+
+footer {
+	margin-top: 150px!important;
+}
+
+
+.btnInfo {
+	background-color: #98712A!important;
+	border-color: #98712A!important;
+	
+}
+
+.btnInfo {
+	color: #001C3D!important;
+/*	font-weight: 100!important;*/
+}
+
+.btnInfo:hover {
+	color: white!important;
+}
+
+.btnBesoin {
+	width: 40%!important;
+}

@@ -10,4 +10,12 @@ namespace AppBundle\Repository;
  */
 class BesoinRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function findAllOrderedById()
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p FROM AppBundle:Besoin p ORDER BY p.id desc'
+            )
+            ->getResult();
+    }
 }

@@ -26,7 +26,7 @@ class BesoinController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $besoins = $em->getRepository('AppBundle:Besoin')->findAll();
+        $besoins = $em->getRepository('AppBundle:Besoin')->findAllOrderedById();
 		$user = $em->getRepository('AppBundle:User')->findAll();
 		
         return $this->render('besoin/index.html.twig', array(
@@ -79,9 +79,9 @@ class BesoinController extends Controller
      */
     public function showAction(Besoin $besoin, $id)
     {
-		$em = $this->getDoctrine()->getManager();
-		$besoin = $em->getRepository('AppBundle:Besoin')->find($id);
-		$user = $em->getRepository('AppBundle:User')->findAll();
+//		$em = $this->getDoctrine()->getManager();
+//		$besoin = $em->getRepository('AppBundle:Besoin')->find($id);
+//		$user = $em->getRepository('AppBundle:User')->findAll();
 		
         $deleteForm = $this->createDeleteForm($besoin);
 		//$besoin = $besoin->getUser();
@@ -89,7 +89,7 @@ class BesoinController extends Controller
 		
         return $this->render('besoin/show.html.twig', array(
             'besoin' => $besoin,
-			'user' => $user,
+			//'user' => $user,
             'delete_form' => $deleteForm->createView(),
         ));
     }

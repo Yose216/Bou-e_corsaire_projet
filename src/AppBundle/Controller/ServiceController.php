@@ -71,14 +71,14 @@ class ServiceController extends Controller
      */
     public function showAction(Service $service)
     {
-		$em = $this->getDoctrine()->getManager();
-        $deleteForm = $this->createDeleteForm($service);
-		$user = $em->getRepository('AppBundle:User')->findAll();
+		//$em = $this->getDoctrine()->getManager();
+        //$deleteForm = $this->createDeleteForm($service);
+		//$user = $em->getRepository('AppBundle:User')->findAll();
 
         return $this->render('service/show.html.twig', array(
             'service' => $service,
-			'user' => $user,
-            'delete_form' => $deleteForm->createView(),
+			//'user' => $user,
+           // 'delete_form' => $deleteForm->createView(),
         ));
     }
 

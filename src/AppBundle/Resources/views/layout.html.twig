@@ -62,9 +62,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ path('homepage') }}">Bouée Corsaire</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
+				<div class="navbar-header">
+      				<a class="navbar-brand" href="{{ path('homepage') }}">Bouée Corsaire</a>
+    			</div>
 				<ul class="nav navbar-nav">
 					{% if app.user and is_granted('ROLE_ADMIN') %}
     					<li><a href="{{ path('admin') }}">Administration</a></li>
@@ -94,14 +96,32 @@
 	
 	{% block body %}{% endblock %} {% block javascripts %}{% endblock %}
 	
-	<footer>
-		<i class="fa fa-facebook-square fa-3x" aria-hidden="true" ></i>
-		<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-		<i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
+	<footer class="col-lg-12">
+		<div class="plan col-lg-3 col-lg-offset-1">
+			<h3>Plan du site</h3>
+			<a>Acceuil</a>
+			<a>Service</a>
+			<a>Besoin</a>
+			<a>Mon profil</a>
+		</div>
+
+		<div class="Social col-lg-3 col-lg-offset-1">
+			<h3>Nous suivre</h3>
+			<a>facebook</a>
+			<a>Twitter</a>
+			<a>Google+</a>
+		</div>
+
+		<div class="Contact col-lg-3 col-lg-offset-1">
+			<h3>Contact</h3>
+			<a>Adresse@boueecorsaire.com</a>
+			<a>3 rue de l'adresse</a>
+			<a>35000 rennes</a>
+			<a>Telephone : 0299203010</a>
+		</div>
+		<div class="Mention col-lg-offset-4 col-lg-8">
+			<p>Copyright © 2017 <a>Mentions légales</a> / La bouée corsaire </p>
+		</div>
 	</footer>
-
-
-
-</body>
-
+	</body>
 </html>
